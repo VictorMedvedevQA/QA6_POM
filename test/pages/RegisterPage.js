@@ -1,8 +1,6 @@
 import BasePage from "./BasePage";
 
 class RegisterPage extends BasePage {
-  get header() { return $('h1') }
-  get paragraph() { return $('p') }
   get firstNameField() { return $('[name="firstName"]') }
   get lastNameField() { return $('[name="lastName"]') }
   get phoneField() { return $('[name="phone"]') }
