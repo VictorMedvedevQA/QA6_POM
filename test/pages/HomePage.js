@@ -1,9 +1,6 @@
-import BasePage from "./BasePage";
+import BasePage from './BasePage';
 
-class HomePage extends BasePage{
-  get loginLink() { return $('[qa="login-link"]') }
-  get registerLink() { return $('[qa="register-link"]') }
-
+class HomePage extends BasePage {
   open() {
     super.open('/');
   }

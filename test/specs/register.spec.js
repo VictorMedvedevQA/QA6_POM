@@ -10,6 +10,10 @@ describe('USER REGISTER', () => {
     expect(RegisterPage.header.getText()).eq(text.header);
   });
 
+  it('should verify description text in paragraph is correct', () => {
+    expect(RegisterPage.paragraph.getText()).eq(text.paragraph);
+  });
+
   it('should populate fields and submit form', () => {
     RegisterPage.firstNameField.setValue(user.firstName);
     RegisterPage.lastNameField.setValue(user.lastName);
@@ -17,6 +21,6 @@ describe('USER REGISTER', () => {
     RegisterPage.emailField.setValue(user.email);
     RegisterPage.passwordField.setValue(user.password);
     RegisterPage.submitForm();
-    browser.waitUntil(() => RegisterPage.successMsgDisplayed());
-  })
+    RegisterPage.successMsg.waitForDisplayed();
+  });
 });
