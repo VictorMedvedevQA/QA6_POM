@@ -10,14 +10,13 @@ class RegisterPage extends BasePage {
   get passwordField() { return $('[name="password"]') }
   get submitBtn() { return $('button[type="submit"]') }
 
-  submitForm(){
-    if(this.submitBtn.isClickable()) {
-      this.submitBtn.click();
-    }
-  }
-
   open() {
     super.open('/user/register');
+  }
+
+  submitForm(){
+      this.submitBtn.waitForClickable();
+      this.submitBtn.click();
   }
 
   registerNewUser(user){
